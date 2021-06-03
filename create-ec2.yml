@@ -6,7 +6,7 @@
   tasks:
   - name: Create EC2
     ec2_instance:
-      key_name: "{{ lookup('aws_ssm', '/JJTech/{{ team }}/keyname', region={{ region }}) }}"
+      key_name: "{{ lookup('aws_ssm', '/JJTech/{{ team }}/keyname', region='{{ region }}') }}"
       security_group: "{{ lookup('aws_ssm', '/JJTech/{{ team }}/{{ security_group }}', region={{ region }}) }}"
       image_id: "{{ lookup('aws_ssm', '/JJTech/{{ team }}/{{ ami_type }}', region={{ region }}) }}"
       instance_type: "{{ instance_type }}"
