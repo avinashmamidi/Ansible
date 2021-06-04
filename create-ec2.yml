@@ -34,5 +34,5 @@
 
   - debug:
       msg: "{{ ec2_instance }}"
-  - debug:
-      msg: "{{ ec2.results[0].instance_ids }}"
+#  - debug:
+#      msg: "{{ ec2.results[0].instance_ids }}"
